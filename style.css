@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+img {
+    max-width: 100%;
+    height: 100%;
+    
+}
+.container {
+    padding: 1rem;
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sidebar {
+    position: fixed;
+    right: -220px;
+    top: 0;
+    height: 100vh;
+    width: 40vh;
+    z-index: 100;
+    background-color: red;
+    padding: 40px 25px;
+    transition: right .4s;
+}
+.sidebar div {
+    position: relative;
+    left: 120px;
+    top: -20px;
+}
+ul li {
+    list-style: none;
+    margin-block: 20px;
+}
+li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+.desktop-menu {
+    display: none;
+}
+.hero-image-desktop {
+    display: none;
+}
+.hero-text h1{
+   font-size: 3rem;
+   line-height: 1;
+   padding-block: 1.2rem;
+}
+.hero-text p {
+    line-height: 1.4;
+    padding-bottom: 1.2rem;
+    color: grey;
+}
+button {
+    background-color:  hsl(5, 85%, 63%);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    padding: .5rem 2rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+aside {
+    margin-block: 3rem;
+    padding: 1.3rem;
+    background-color:  hsl(240, 100%, 5%);
+    color: #fff;
+}
+aside h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+}
+aside div div {
+    padding: 1rem 0;
+}
+aside div div:not(aside div div:last-child) {
+    border-bottom: 1px solid grey;
+}
+aside h3 {
+    margin-bottom: .6rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+aside h3:hover {
+    color: hsl(35, 77%, 62%);
+}
+aside div div p {
+    color: grey;
+}
+section:last-of-type > div {
+    display: flex;
+    gap: 20px;   
+}
+section:last-of-type > div div {
+    width: 30%;
+    margin-block: 10px;
+}
+section:last-of-type > div div:last-child {
+    width: 60%;
+    margin-block: 10px;
+}
+section:last-of-type > div div:last-child h1 {
+    color: rgb(167, 157, 157);
+    font-size: 2rem;
+}
+section:last-of-type h4 {
+    margin: 10px 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+section:last-of-type h4:hover {
+    color: hsl(5, 85%, 63%);
+}
+section:last-of-type > div {
+    width: 100%;
+}
+button:hover {
+    background-color:  hsl(240, 100%, 5%);;
+    color: #fff;
+}
+@media (min-width:760px) {
+    .desktop-menu {
+        display: flex;
+    }
+    .desktop-menu li {
+        margin: 0 15px;
+    }
+    .desktop-menu li a {
+        color: gray;
+    }
+    .sec1,
+    .hero-text,
+    section:last-of-type {
+        display: flex;
+    }
+    .sec1{
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    .hero-text h1 {
+        width: 300px;
+    }
+    .hero-text {
+        justify-content: space-between;
+    }
+    .hero-image-mobile {
+        display: none;
+    }
+    .hero-image-desktop {
+        display: block;
+
+    }
+    aside {
+        margin-block: 0;
+        padding-bottom: 0;
+    }
+    .hero-text p {
+        width: 300px;
+    }
+    .container {
+        padding: 2rem;
+    }
+    .sidebar,
+    #openMenu {
+        display: none;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
